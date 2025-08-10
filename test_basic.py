@@ -1,7 +1,7 @@
 from index import fetch_data, inch_to_mm, fahrenheit_to_celsius, knots_to_mps, ft_to_m
 from unittest.mock import patch
 
-# Проверки фукнций преобразования единиц измерения
+# Проверки функций преобразования единиц измерения
 def test_inch_to_mm():
     assert inch_to_mm(0) == 0
     assert inch_to_mm(1) == 25.4
@@ -41,3 +41,4 @@ def test_fetch_data_returns_json():
         
         result = fetch_data(url)
         assert isinstance(result, dict)
+
