@@ -10,17 +10,17 @@ def test_inch_to_mm():
 def test_fahrenheit_to_celsius():
     assert fahrenheit_to_celsius(32) == 0
     assert fahrenheit_to_celsius(212) == 100
-    assert round(fahrenheit_to_celsius(68), 2) == 20
+    assert fahrenheit_to_celsius(68) == 20
 
 def test_knots_to_mps():
     assert knots_to_mps(0) == 0
-    assert round(knots_to_mps(1), 5) == 0.51444
-    assert round(knots_to_mps(10), 5) == 5.14444
+    assert knots_to_mps(1) == 0.51444
+    assert knots_to_mps(10) == 5.14444
 
 def test_ft_to_m():
     assert ft_to_m(0) == 0
-    assert round(ft_to_m(1), 5) == 0.3048
-    assert round(ft_to_m(10), 5) == 3.048
+    assert ft_to_m(1) == 0.3048
+    assert ft_to_m(10) == 3.048
 
 # Функция проверки того, что fetch_data возвращает json
 def test_fetch_data_returns_json():
@@ -41,4 +41,5 @@ def test_fetch_data_returns_json():
         
         result = fetch_data(url)
         assert isinstance(result, dict)
+
 
